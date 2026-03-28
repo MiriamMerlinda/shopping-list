@@ -1,0 +1,287 @@
+/* ======================== 🌍 BASE GENERAL ======================== */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-image: url("background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* ======================== 📦 CONTENEDOR ======================== */
+.container {
+  position: relative;
+  max-width: 700px;
+  width: 500px;
+  height: 73vh;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  max-height: 90vh;
+  overflow-y: auto;
+  padding-bottom: 120px;
+}
+
+/* ======================== 📝 TEXTO ======================== */
+h1 {
+  text-align: center;
+  color: #0a356a;
+  margin-bottom: 5px;
+}
+
+#contador {
+  text-align: center;
+  color: #797979;
+  margin-bottom: 15px;
+}
+
+/* ======================== ✏️ INPUT ======================== */
+.input-group {
+  display: flex;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+}
+
+/* ======================== 🔘 BOTONES GENERALES ======================== */
+button {
+  border: none;
+  background: #ffffff;
+  color: #2A2C41;
+  padding: 10px 15px;
+  border-radius: 80px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: large;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+/* ======================== ➕ BOTÓN AGREGAR ======================== */
+.btn-agregar {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #FD5E02, #FF724C);
+  color: white;
+  font-size: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+
+.btn-agregar:hover {
+  transform: scale(1.05);
+  transition: 0.2s;
+}
+
+/* ======================== 🔽 BOTONES DE ICONO ======================== */
+.btn-icono {
+  background: none;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+  color: #2A2C41;
+}
+
+.btn-icono:hover {
+  transform: scale(1.2);
+  transition: 0.2s;
+}
+
+/* ======================== 📋 LISTA ======================== */
+li {
+  background: #faf5e7;
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  animation: fadeIn 0.3s ease;
+}
+
+/* ======================== 📂 SECCIONES ======================== */
+.seccion {
+  margin-top: 20px;
+  font-weight: bold;
+  color: #2A2C41;
+}
+
+/* ======================== 🔘 BOTONES ABAJO ======================== */
+.bottom-bar {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  padding: 10px 20px;
+  border-radius: 50px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.btn-circle {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background-color: #f5f2ef;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-circle:hover {
+  transform: scale(1.1);
+  transition: 0.2s;
+}
+
+.icono-bar {
+  width: 56px;
+  height: 56px;
+}
+
+.btn-add-img {
+  width: 50px;
+  height: 50px;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icono-add {
+  width: 80px;
+  height: 80px;
+  object-fit: contain; 
+}
+
+.btn-add-img:hover {
+  transform: scale(1.15);
+  transition: 0.2s;
+}
+
+.icono-add, .icono-check {
+  width: 20px;
+  height: 20px;
+}
+
+/* ======================== ✨ EFECTOS ======================== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.btn-eliminar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-eliminar:hover, .btn-share:hover {
+  transform: scale(1.1);
+  transition: 0.2s;
+}
+
+.icono-eliminar {
+  width: 29px;
+  height: 29px;
+}
+
+.btn-share {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+}
+
+.icono-share {
+  width: 40px;
+  height: 40px;
+}
+
+/* ======================== 📋 SCROLLABLE ======================== */
+.lista-scrollable {
+  flex-grow: 1;
+  overflow-y: auto;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+/* ======================== 💬 TOOLTIP ======================== */
+.btn-circle {
+  position: relative;
+}
+
+.btn-circle::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 120%;
+  background: #2A2C41;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 8px;
+  font-size: 12px;
+  white-space: nowrap;
+  opacity: 0;
+  transform: translateY(5px);
+  transition: 0.2s;
+}
+
+.btn-circle::before {
+  content: "";
+  position: absolute;
+  bottom: 105%;
+  border: 6px solid transparent;
+  border-top-color: #2A2C41;
+  opacity: 0;
+  transition: 0.2s;
+}
+
+.btn-circle:hover::after,
+.btn-circle:hover::before {
+  opacity: 1;
+  transform: translateY(0);
+}

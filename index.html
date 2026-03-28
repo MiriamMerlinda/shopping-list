@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Mi Lista del Súper</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <div class="container">
+  <header>
+    <h1>🛒 Mi Lista del Súper</h1>
+    <p id="contador"></p>
+  </header>
+
+  <div class="input-group">
+    <input type="text" id="inputProducto" placeholder="Escribe un producto..." />
+    <button class="btn-add-img" onclick="agregarProducto()">
+      <img src="add.png" class="icono-add" />
+    </button>
+  </div>
+
+  <div class="lista-scrollable">
+    <ul id="lista"></ul>
+  </div>
+
+   <div class="bottom-bar">
+  
+
+  <button class="btn-circle" data-tooltip="Vaciar" onclick="limpiarLista()">
+    <img src="clean.png" class="icono-bar" alt="Limpiar">
+  </button>
+
+  <button class="btn-circle" data-tooltip="Descargar" onclick="guardarPDF()">
+    <img src="share.png" class="icono-bar" alt="Compartir">
+  </button>
+</div>
+
+  <script src="script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+</body>
+</html>
